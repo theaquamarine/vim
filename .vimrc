@@ -3,6 +3,9 @@ set nocompatible
 
 set encoding=utf-8
 
+" fire up pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 " pathogen
 execute pathogen#infect()
 
