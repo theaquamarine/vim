@@ -38,6 +38,9 @@ set hlsearch                " hilight search matches
 set incsearch               " go to search results as you type
 set ignorecase smartcase    " select case-insenitive search (not default)
 
+" tags
+set tags+=./.tags;
+
 " put a marker in column 120
 set colorcolumn=120
 
