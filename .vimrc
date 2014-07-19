@@ -70,6 +70,9 @@ set showmode
 " changes special characters in search patterns (default)
 " set magic
 
+" Set up symbols for airline
+let g:airline_powerline_fonts = 1
+
 " Required to be able to use keypad keys and map missed escape sequences
 set esckeys
 
