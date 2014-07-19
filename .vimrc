@@ -74,6 +74,12 @@ set esckeys
 autocmd FileType tex setlocal wrap
 autocmd BufNewFile,BufRead *.txt setlocal wrap
 
+" set shell depending on OS
+if has('win32')
+    set shell=powershell
+    command Powershell !start powershell
+endif
+
 " spell checking
 if v:version >= 700
 	" enable spellchecking
