@@ -77,9 +77,11 @@ set esckeys
 autocmd FileType tex setlocal wrap
 autocmd BufNewFile,BufRead *.txt setlocal wrap
 
-" set shell depending on OS
-if has('win32')
-    set shell=powershell
+if executable("ConEmu64.exe")
+    " ConEmu hooking gvim breaks calling the shell, eg for fugitive.
+    command Powershell !start ConEmu64.exe
+elseif executable("powershell.exe")
+    " Changing the shell to powershell breaks fugitive
     command Powershell !start powershell
 endif
 
