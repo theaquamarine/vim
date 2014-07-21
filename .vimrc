@@ -82,7 +82,7 @@ autocmd BufNewFile,BufRead *.txt setlocal wrap
 
 if executable("ConEmu64.exe")
     " ConEmu hooking gvim breaks calling the shell, eg for fugitive.
-    command Powershell !start ConEmu64.exe
+    command Powershell !start ConEmu64.exe powershell
 elseif executable("powershell.exe")
     " Changing the shell to powershell breaks fugitive
     command Powershell !start powershell
