@@ -46,6 +46,7 @@ set colorcolumn=120
 
 " fold by syntax
 set foldmethod=syntax
+set foldlevelstart=99       " no folds closed when buffer opened
 
 " enable mouse
 "set mouse=a " disabled in favour of os mouse functionality
@@ -82,7 +83,7 @@ autocmd BufNewFile,BufRead *.txt setlocal wrap
 
 if executable("ConEmu64.exe")
     " ConEmu hooking gvim breaks calling the shell, eg for fugitive.
-    command Powershell !start ConEmu64.exe powershell
+    command Powershell !start ConEmu64.exe
 elseif executable("powershell.exe")
     " Changing the shell to powershell breaks fugitive
     command Powershell !start powershell
